@@ -9,7 +9,6 @@ export const phoneList = () => {
       hideNumberLink.style.opacity = '1';
       btnArrowImg.style.cssText = 'transform: rotate(180deg);';
     } else if (!e.target.closest('.header-contacts')) {
-      console.log(e.target)
       hideNumber.style.position = 'absolute';
       hideNumberLink.style.opacity = '0';
       btnArrowImg.style.cssText = 'transform: rotate(0deg);';
