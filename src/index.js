@@ -1,5 +1,3 @@
-import one from "./modules/one"
-import two from "./modules/two"
+import { phoneList } from "./modules/landing/phone-list"
 
-one()
-two()
+phoneList()
