@@ -1,3 +1,4 @@
+import { accordeon } from "./modules/landing/accordeon"
 import { burgerMenu } from "./modules/landing/burger"
 import { modal } from "./modules/landing/modal"
 import { phoneList } from "./modules/landing/phone-list"
@@ -7,3 +8,4 @@ phoneList()
 burgerMenu()
 scroll()
 modal()
+accordeon()
