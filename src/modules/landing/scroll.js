@@ -1,6 +1,6 @@
 export const scroll = () => {
   const footerBtn = document.querySelector('.button-footer > a');
-  const menuLink = document.querySelectorAll('.popup-menu-nav__item > a');
+  const menuLink = document.querySelectorAll('.menu-link');
   const links = [footerBtn, ...menuLink];
 
   links.forEach(link => {
