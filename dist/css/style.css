@@ -1717,6 +1717,7 @@ template,
         margin-top: 0;
     }
 
+
     .repair-types-nav__item svg {
         height: 33px;
     }
@@ -7224,6 +7225,7 @@ div.wave-block:nth-child(17):after {
     transition: 0.4s;
 }
 
+
 .nav-list-repair {
     min-width: 390px;
     display: block;
@@ -7235,7 +7237,6 @@ div.wave-block:nth-child(17):after {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         max-width: 100%;
     }

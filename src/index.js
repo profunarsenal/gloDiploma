@@ -6,6 +6,7 @@ import { phoneList } from "./modules/landing/phone-list"
 import { scroll } from "./modules/landing/scroll"
 import { slider } from "./modules/landing/slider"
 import { tabs } from "./modules/landing/tabs"
+import { transformSlider } from "./modules/landing/transformSlider"
 
 phoneList()
 burgerMenu()
@@ -14,6 +15,8 @@ modal()
 accordeon()
 tabs()
 hover()
+
+transformSlider('.nav-list-repair', 'nav-arrow-repair-left_base', 'nav-arrow-repair-right_base')
 
 slider('.popup-transparency-slider', '.popup-transparency-slider__slide',
   '.popup-arrow_transparency_left', '.popup-arrow_transparency_right',
