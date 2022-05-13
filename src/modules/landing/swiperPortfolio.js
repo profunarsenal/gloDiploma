@@ -39,12 +39,4 @@ export const swiperPortfolio = () => {
     },
   });
 
-  const transparencySlider = new Swiper('.transparency-slider', {
-    modules: [Navigation],
-    slidesPerView: 1,
-    navigation: {
-      nextEl: "#portfolio-arrow_right",
-      prevEl: "#portfolio-arrow_left",
-    },
-  });
 }
