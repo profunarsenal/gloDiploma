@@ -1,5 +1,4 @@
-export const slider = (sliderClass, slidesClass, btnPrevClass, btnNextClass, slideCurrentClass, slidesTotalClass) => {
-  const slider = document.querySelector(sliderClass);
+export const slider = (slidesClass, btnPrevClass, btnNextClass, slideCurrentClass, slidesTotalClass, display = 'block') => {
   const slides = document.querySelectorAll(slidesClass);
   const btnPrev = document.querySelector(btnPrevClass);
   const btnNext = document.querySelector(btnNextClass);
@@ -7,8 +6,10 @@ export const slider = (sliderClass, slidesClass, btnPrevClass, btnNextClass, sli
   const slidesTotal = document.querySelector(slidesTotalClass);
   let position = 0;
 
-  slideCurrent.textContent = position + 1;
-  slidesTotal.textContent = slides.length;
+  if (slideCurrent && slidesTotal) {
+    slideCurrent.textContent = position + 1;
+    slidesTotal.textContent = slides.length;
+  }
 
   const nextSlide = () => {
     slides[position].style.display = 'none';
@@ -16,8 +17,11 @@ export const slider = (sliderClass, slidesClass, btnPrevClass, btnNextClass, sli
     if (position >= slides.length) {
       position = 0;
     }
-    slides[position].style.display = 'block';
-    slideCurrent.textContent = position + 1;
+    slides[position].style.display = display;
+
+    if (slideCurrent) {
+      slideCurrent.textContent = position + 1;
+    }
   }
 
   const prevSlide = () => {
@@ -26,8 +30,11 @@ export const slider = (sliderClass, slidesClass, btnPrevClass, btnNextClass, sli
     if (position < 0) {
       position = slides.length - 1;
     }
-    slides[position].style.display = 'block';
-    slideCurrent.textContent = position + 1;
+    slides[position].style.display = display;
+
+    if (slideCurrent) {
+      slideCurrent.textContent = position + 1;
+    }
   }
 
   btnPrev.addEventListener('click', prevSlide);

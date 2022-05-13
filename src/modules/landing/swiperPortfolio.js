@@ -6,7 +6,6 @@ export const swiperPortfolio = () => {
   let portfolioCounter = 0;
 
   const showButton = () => {
-    console.log(portfolioCounter)
     if (portfolioCounter > 0) {
       portfolioBtnPrev.style.display = 'flex';
     } else if (portfolioCounter <= 0) {
@@ -34,6 +33,15 @@ export const swiperPortfolio = () => {
   const portfolioSlider = new Swiper('.portfolio-slider', {
     modules: [Navigation],
     slidesPerView: 3,
+    navigation: {
+      nextEl: "#portfolio-arrow_right",
+      prevEl: "#portfolio-arrow_left",
+    },
+  });
+
+  const transparencySlider = new Swiper('.transparency-slider', {
+    modules: [Navigation],
+    slidesPerView: 1,
     navigation: {
       nextEl: "#portfolio-arrow_right",
       prevEl: "#portfolio-arrow_left",

@@ -2,15 +2,25 @@ export const modal = () => {
   const priceLinks = document.querySelectorAll('.link-list > a');
   const priceModal = document.querySelector('.popup-repair-types');
   const closePriceModalBtn = priceModal.querySelector('.close');
+
   const privacyLinks = document.querySelectorAll('.link-privacy');
   const privacyModal = document.querySelector('.popup-privacy');
   const closePrivacyModalBtn = privacyModal.querySelector('.close');
+
   const transparencyLinks = document.querySelectorAll('.transparency-item__img');
   const transparencyModal = document.querySelector('.popup-transparency');
-  const closeTransparencyModalBtn = transparencyModal.querySelector('.close');
+  const closeTransparencyModalBtns = transparencyModal.querySelectorAll('.close-t');
+
   const consultationLink = document.querySelectorAll('.button_wide');
   const consultationModal = document.querySelector('.popup-consultation');
   const closeconsultationModalBtn = consultationModal.querySelector('.close');
+
+  const portfolioLinks = document.querySelectorAll('.portfolio-slider__slide-frame');
+  const portfolioModal = document.querySelector('.popup-portfolio');
+  const closePortfolioModalBtn = portfolioModal.querySelector('.close');
+
+
+  let screenWidth = document.documentElement.clientWidth;
 
   const openModal = (modal) => {
     modal.style.visibility = 'visible';
@@ -44,6 +54,7 @@ export const modal = () => {
     })
   })
 
+
   closePriceModalBtn.addEventListener('click', () => {
     closeModal(priceModal)
   })
@@ -52,11 +63,30 @@ export const modal = () => {
     closeModal(privacyModal)
   })
 
-  closeTransparencyModalBtn.addEventListener('click', () => {
-    closeModal(transparencyModal)
-  })
-
   closeconsultationModalBtn.addEventListener('click', () => {
     closeModal(consultationModal)
   })
+
+  closeTransparencyModalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeModal(transparencyModal)
+    })
+  })
+
+  if (screenWidth > 576) {
+    portfolioLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        openModal(portfolioModal)
+      })
+    })
+
+    closePortfolioModalBtn.addEventListener('click', () => {
+      closeModal(portfolioModal)
+    })
+  }
+
+  window.addEventListener('resize', () => {
+    screenWidth = document.documentElement.clientWidth;
+  })
+
 }

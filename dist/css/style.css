@@ -5975,7 +5975,6 @@ div.wave-block:nth-child(17):after {
 }
 
 .popup-portfolio-slider-wrap {
-    position: relative;
     width: 67%;
     height: 100%;
 }
@@ -7053,7 +7052,7 @@ div.wave-block:nth-child(17):after {
     position: absolute;
     top: 50%;
     margin-top: -8px;
-    z-index: 1;
+    z-index: 999;
     cursor: pointer;
 }
 
