@@ -117,7 +117,7 @@
 					</div><!-- services-item - 4-->
 				</div><!-- /row -->
 				<div class="services-slider">
-					<div class="services-slider__slide services-item">
+					<div class="services-slider__slide services-item services-slide">
 						<div class="services-item__img"><img src="./images/main/circle.svg" alt="circle"> <img
 								class="services-item__img-inner-1" src="./images/main/circle_1_icon.svg" alt="circle">
 						</div>
@@ -125,7 +125,7 @@
 							<img src="./images/main/subtract1.svg" alt="ремонта">
 						</div>
 					</div><!-- services-item - 1-->
-					<div class="services-slider__slide services-item">
+					<div class="services-slider__slide services-item services-slide" style="display: none;">
 						<div class="services-item__img"><img src="./images/main/circle.svg" alt="circle"> <img
 								class="services-item__img-inner-2" src="./images/main/circle_2_icon.svg" alt="circle">
 						</div>
@@ -135,7 +135,7 @@
 							</div>
 						</div>
 					</div><!-- services-item - 2-->
-					<div class="services-slider__slide services-item">
+					<div class="services-slider__slide services-item services-slide" style="display: none;">
 						<div class="services-item__img"><img src="./images/main/circle.svg" alt="circle"> <img
 								class="services-item__img-inner-3" src="./images/main/circle_3_icon.svg" alt="circle">
 						</div>
@@ -143,7 +143,7 @@
 							<img src="./images/main/subtract3.svg" alt="материалов">
 						</div>
 					</div><!-- services-item - 3-->
-					<div class="services-slider__slide services-item">
+					<div class="services-slider__slide services-item services-slide" style="display: none;">
 						<div class="services-item__img"><img src="./images/main/circle.svg" alt="circle">
 							<div class="services-item__img-inner-4">
 								<svg width="53" height="53" fill="none" viewBox="0 0 53 53" preserveAspectRatio="xMinYMin meet"
@@ -174,6 +174,22 @@
 							</div>
 						</div>
 					</div><!-- services-item - 4-->
+					<div class="slider-arrow slider-arrow_left slider-services-left">
+						<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
+							preserveAspectRatio="xMinYMin meet">
+							<path
+								d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+								fill="#322823"></path>
+						</svg>
+					</div>
+					<div class="slider-arrow slider-arrow_right slider-services-right">
+						<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
+							preserveAspectRatio="xMinYMin meet">
+							<path
+								d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+								fill="#322823"></path>
+						</svg>
+					</div>
 				</div>
 				<button class="button button_wide">Проконсультироваться</button>
 				<div class="feedback">
@@ -1916,7 +1932,7 @@
 	</div>
 	<!-- /popup popup-repair-types -->
 	<div class="popup popup-portfolio">
-		<div class="close mobile-hide">
+		<div class="close mobile-hide close-portfolio">
 			<svg width="22" height="22" fill="none" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd"
 					d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"
@@ -1926,7 +1942,7 @@
 		<div class="popup-dialog popup-dialog-portfolio">
 			<div class="row">
 				<div class="popup-portfolio-slider-wrap">
-					<div class="close tablet-hide desktop-hide">
+					<div class="close tablet-hide desktop-hide close-portfolio">
 						<svg width="22" height="22" fill="none" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd"
 								d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"
@@ -2383,7 +2399,7 @@
 		</div>
 	</div>
 	<div class="popup popup-privacy">
-		<div class="close mobile-hide">
+		<div class="close mobile-hide close-pri">
 			<svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
 				<path fill-rule="evenodd" clip-rule="evenodd"
 					d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"
@@ -2391,7 +2407,7 @@
 			</svg>
 		</div>
 		<div class="popup-dialog popup-dialog-privacy">
-			<div class="close tablet-hide desktop-hide">
+			<div class="close tablet-hide desktop-hide close-pri">
 				<svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
 					<path fill-rule="evenodd" clip-rule="evenodd"
 						d="M21.673.327a1.118 1.118 0 0 0-1.581 0L11 9.42 1.909.327A1.118 1.118 0 0 0 .327 1.91L9.42 11 .327 20.091a1.118 1.118 0 1 0 1.582 1.581L11 12.582l9.091 9.09a1.118 1.118 0 1 0 1.581-1.58L12.582 11l9.09-9.091a1.118 1.118 0 0 0 0-1.582z"

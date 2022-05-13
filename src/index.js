@@ -61,3 +61,6 @@ slider('.popup-portfolio-text',
 
 slider('.reviews-slider__slide',
   '.reviews-arrow_left', '.reviews-arrow_right', null, null, 'flex');
+
+slider('.services-slide',
+  '.slider-services-left', '.slider-services-right', null, null, 'flex');
