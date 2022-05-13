@@ -7548,7 +7548,7 @@ div.wave-block:nth-child(17):after {
 
 @media (max-width: 1024px) {
     .slider-counter-repair {
-        bottom: 90px;
+        bottom: 10px;
     }
 }
 
