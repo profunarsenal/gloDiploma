@@ -7101,7 +7101,7 @@ div.wave-block:nth-child(17):after {
 }
 
 .slider-arrow_left {
-    left: -20px;
+    left: 10px;
 }
 
 .slider-arrow_left-portfolio {
@@ -7127,7 +7127,7 @@ div.wave-block:nth-child(17):after {
 }
 
 .slider-arrow_right {
-    right: -20px;
+    right: 10px;
 }
 
 .slider-arrow_right-portfolio {

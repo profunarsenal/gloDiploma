@@ -11,6 +11,7 @@
 		href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,600,700,800,900&amp;subset=cyrillic,cyrillic-ext"
 		rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<title>Relax Live</title>
 </head>
 <script src="./js/main.js" defer></script>
@@ -387,98 +388,187 @@
 	<div class="repair-types" id="repair-types">
 		<div class="wrapper_middle">
 			<div class="row row_reverse">
-				<div class="repair-types-slider-wrap">
+				<div class="repair-types-slider-wrap ">
 					<div class="repair-types-slider">
 						<div class="types-repair1">
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair1-slide">
 								<img src="./images/repair-types/electro.jpg" alt="electro">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair1-slide">
 								<img src="./images/repair-types/cosmetic.jpg" alt="cosmetic">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair1-slide">
 								<img src="./images/repair-types/capital.jpg" alt="capital">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair1-slide">
 								<img src="./images/repair-types/electro.jpg" alt="electro">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair1-slide">
 								<img src="./images/repair-types/cosmetic.jpg" alt="cosmetic">
 							</div>
+							<div class="slider-arrow slider-arrow_left types-repair1_left" id="repair-types-arrow_left">
+								<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12"
+									preserveAspectRatio="xMinYMin meet">
+									<path
+										d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+										fill="#322823"></path>
+								</svg>
+							</div>
+							<div class="slider-arrow slider-arrow_right types-repair1_right" id="repair-types-arrow_right">
+								<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
+									preserveAspectRatio="xMinYMin meet">
+									<path
+										d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+										fill="#322823"></path>
+								</svg>
+							</div>
+							<div class="slider-counter slider-counter-repair slider-counter-responsive" id="repair-counter">
+								<div class="slider-counter-content">
+									<div class="slider-counter-content__current types-repair1_current"></div>
+									<div class="slider-counter-content__total types-repair1_total"></div>
+								</div>
+							</div>
 						</div>
-						<div class="types-repair2">
-							<div class="repair-types-slider__slide">
+						<div class="types-repair2" style="display: none;">
+							<div class="repair-types-slider__slide types-repair2-slide">
 								<img src="./images/repair-types/cosmetic.jpg" alt="cosmetic">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair2-slide">
 								<img src="./images/repair-types/electro.jpg" alt="electro">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair2-slide">
 								<img src="./images/repair-types/capital.jpg" alt="capital">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair2-slide">
 								<img src="./images/repair-types/electro.jpg" alt="electro">
+							</div>
+							<div class="slider-arrow slider-arrow_left types-repair2_left" id="repair-types-arrow_left">
+								<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12"
+									preserveAspectRatio="xMinYMin meet">
+									<path
+										d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+										fill="#322823"></path>
+								</svg>
+							</div>
+							<div class="slider-arrow slider-arrow_right types-repair2_right" id="repair-types-arrow_right">
+								<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
+									preserveAspectRatio="xMinYMin meet">
+									<path
+										d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+										fill="#322823"></path>
+								</svg>
+							</div>
+							<div class="slider-counter slider-counter-repair slider-counter-responsive" id="repair-counter">
+								<div class="slider-counter-content">
+									<div class="slider-counter-content__current types-repair2_current"></div>
+									<div class="slider-counter-content__total types-repair2_total"></div>
+								</div>
 							</div>
 						</div>
-						<div class="types-repair3">
-							<div class="repair-types-slider__slide">
+						<div class="types-repair3" style="display: none;">
+							<div class="repair-types-slider__slide types-repair3-slide">
 								<img src="./images/repair-types/capital.jpg" alt="capital">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair3-slide">
 								<img src="./images/repair-types/electro.jpg" alt="electro">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair3-slide">
 								<img src="./images/repair-types/capital.jpg" alt="capital">
+							</div>
+							<div class="slider-arrow slider-arrow_left types-repair3_left" id="repair-types-arrow_left">
+								<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12"
+									preserveAspectRatio="xMinYMin meet">
+									<path
+										d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+										fill="#322823"></path>
+								</svg>
+							</div>
+							<div class="slider-arrow slider-arrow_right types-repair3_right" id="repair-types-arrow_right">
+								<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
+									preserveAspectRatio="xMinYMin meet">
+									<path
+										d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+										fill="#322823"></path>
+								</svg>
+							</div>
+							<div class="slider-counter slider-counter-repair slider-counter-responsive" id="repair-counter">
+								<div class="slider-counter-content">
+									<div class="slider-counter-content__current types-repair3_current"></div>
+									<div class="slider-counter-content__total types-repair3_total"></div>
+								</div>
 							</div>
 						</div>
-						<div class="types-repair4">
-							<div class="repair-types-slider__slide">
+						<div class="types-repair4" style="display: none;">
+							<div class="repair-types-slider__slide types-repair4-slide">
 								<img src="./images/repair-types/electro.jpg" alt="electro">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair4-slide">
 								<img src="./images/repair-types/cosmetic.jpg" alt="cosmetic">
 							</div>
+							<div class="slider-arrow slider-arrow_left types-repair4_left" id="repair-types-arrow_left">
+								<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12"
+									preserveAspectRatio="xMinYMin meet">
+									<path
+										d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+										fill="#322823"></path>
+								</svg>
+							</div>
+							<div class="slider-arrow slider-arrow_right types-repair4_right" id="repair-types-arrow_right">
+								<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
+									preserveAspectRatio="xMinYMin meet">
+									<path
+										d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+										fill="#322823"></path>
+								</svg>
+							</div>
+							<div class="slider-counter slider-counter-repair slider-counter-responsive" id="repair-counter">
+								<div class="slider-counter-content">
+									<div class="slider-counter-content__current types-repair4_current"></div>
+									<div class="slider-counter-content__total types-repair4_total"></div>
+								</div>
+							</div>
 						</div>
-						<div class="types-repair5">
-							<div class="repair-types-slider__slide">
+						<div class="types-repair5" style="display: none;">
+							<div class="repair-types-slider__slide types-repair5-slide">
 								<img src="./images/repair-types/capital.jpg" alt="capital">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair5-slide">
 								<img src="./images/repair-types/electro.jpg" alt="electro">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair5-slide">
 								<img src="./images/repair-types/capital.jpg" alt="capital">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair5-slide">
 								<img src="./images/repair-types/electro.jpg" alt="electro">
 							</div>
-							<div class="repair-types-slider__slide">
+							<div class="repair-types-slider__slide types-repair5-slide">
 								<img src="./images/repair-types/capital.jpg" alt="capital">
 							</div>
+							<div class="slider-arrow slider-arrow_left types-repair5_left" id="repair-types-arrow_left">
+								<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12"
+									preserveAspectRatio="xMinYMin meet">
+									<path
+										d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
+										fill="#322823"></path>
+								</svg>
+							</div>
+							<div class="slider-arrow slider-arrow_right types-repair5_right" id="repair-types-arrow_right">
+								<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
+									preserveAspectRatio="xMinYMin meet">
+									<path
+										d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
+										fill="#322823"></path>
+								</svg>
+							</div>
+							<div class="slider-counter slider-counter-repair slider-counter-responsive" id="repair-counter">
+								<div class="slider-counter-content">
+									<div class="slider-counter-content__current types-repair5_current"></div>
+									<div class="slider-counter-content__total types-repair5_total"></div>
+								</div>
+							</div>
 						</div>
+
 					</div><!-- /.repair-types-slider -->
-					<div class="slider-counter slider-counter-repair slider-counter-responsive" id="repair-counter">
-						<div class="slider-counter-content">
-							<div class="slider-counter-content__current">1</div>
-							<div class="slider-counter-content__total">3</div>
-						</div>
-					</div>
-					<div class="slider-arrow slider-arrow_left" id="repair-types-arrow_left">
-						<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12"
-							preserveAspectRatio="xMinYMin meet">
-							<path
-								d="M.97 5.47a.75.75 0 0 0 0 1.06l4.773 4.773a.75.75 0 1 0 1.06-1.06L2.561 6l4.242-4.243a.75.75 0 0 0-1.06-1.06L.97 5.47zm16.53-.22h-16v1.5h16v-1.5z"
-								fill="#322823"></path>
-						</svg>
-					</div>
-					<div class="slider-arrow slider-arrow_right" id="repair-types-arrow_right">
-						<svg width="17" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 12"
-							preserveAspectRatio="xMinYMin meet">
-							<path
-								d="M16.03 5.47a.75.75 0 0 1 0 1.06l-4.773 4.773a.75.75 0 0 1-1.06-1.06L14.439 6l-4.242-4.243a.75.75 0 1 1 1.06-1.06L16.03 5.47zM.5 5.25h15v1.5H.5v-1.5z"
-								fill="#322823"></path>
-						</svg>
-					</div>
 					<div class="link-list link-list-repair desktop-hide"><a>Полный список услуг и цен
 							<svg width="17" height="16" fill="none" viewBox="0 0 17 16" preserveAspectRatio="xMinYMin meet">
 								<path
@@ -2238,30 +2328,30 @@
 							src="./images/popup/transparency-slide1.jpg" alt="">
 						<img class="tablet-hide desktop-hide" src="./images/popup/mobile1.jpg" alt="">
 					</div>
-					<div class="popup-transparency-slider__slide"><img class="mobile-hide"
+					<div class="popup-transparency-slider__slide "><img class="mobile-hide"
 							src="./images/popup/transparency-slide2.jpg" alt="">
 						<img class="tablet-hide desktop-hide" src="./images/popup/mobile1.jpg" alt="">
 					</div>
-					<div class="popup-transparency-slider__slide"><img class="mobile-hide"
+					<div class="popup-transparency-slider__slide "><img class="mobile-hide"
 							src="./images/popup/transparency-slide3.jpg" alt="">
 						<img class="tablet-hide desktop-hide" src="./images/popup/mobile1.jpg" alt="">
 					</div>
 				</div>
 				<div class="slider-counter slider-counter_dark" id="transparency-popup-counter">
 					<div class="slider-counter-content">
-						<div class="slider-counter-content__current"></div>
-						<div class="slider-counter-content__total"></div>
+						<div class="slider-counter-content__current transparency-current"></div>
+						<div class="slider-counter-content__total transparency-total"></div>
 					</div>
 				</div>
 				<div class="popup-arrow popup-arrow_transparency popup-arrow_transparency_left" id="transparency_left">
 					<svg width="18" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M16.543 23.205L1 12.103 16.543 1.002" stroke="#fff" stroke-opacity=".5" stroke-width="1.665"
+						<path d="M16.543 23.205L1 12.103 16.543 1.002" stroke="#000" stroke-opacity=".5" stroke-width="1.665"
 							stroke-linecap="round" stroke-linejoin="round"></path>
 					</svg>
 				</div>
 				<div class="popup-arrow popup-arrow_transparency popup-arrow_transparency_right" id="transparency_right">
 					<svg width="18" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M1.458 1L17 12.102 1.458 23.204" stroke="#fff" stroke-opacity=".5" stroke-width="1.665"
+						<path d="M1.458 1L17 12.102 1.458 23.204" stroke="#000" stroke-opacity=".5" stroke-width="1.665"
 							stroke-linecap="round" stroke-linejoin="round"></path>
 					</svg>
 				</div>
