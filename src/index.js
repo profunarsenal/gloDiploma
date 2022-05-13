@@ -3,6 +3,7 @@ import { burgerMenu } from "./modules/landing/burger"
 import { hover } from "./modules/landing/hover"
 import { modal } from "./modules/landing/modal"
 import { phoneList } from "./modules/landing/phone-list"
+import { price } from "./modules/landing/price"
 import { scroll } from "./modules/landing/scroll"
 import { slider } from "./modules/landing/slider"
 import { sliderMobile } from "./modules/landing/sliderMobile"
@@ -15,6 +16,7 @@ burgerMenu()
 scroll()
 modal()
 accordeon()
+price()
 tabs()
 hover()
 swiperPortfolio()
@@ -56,3 +58,6 @@ slider('.portfolioModal-slide',
 slider('.popup-portfolio-text',
   '.portfolio-modal-left', '.portfolio-modal-right',
   '.modal-current', '.modal-total');
+
+slider('.reviews-slider__slide',
+  '.reviews-arrow_left', '.reviews-arrow_right', null, null, 'flex');

@@ -1,7 +1,7 @@
 export const modal = () => {
   const priceLinks = document.querySelectorAll('.link-list > a');
   const priceModal = document.querySelector('.popup-repair-types');
-  const closePriceModalBtn = priceModal.querySelector('.close');
+  const closePriceModalBtns = priceModal.querySelectorAll('.close-price');
 
   const privacyLinks = document.querySelectorAll('.link-privacy');
   const privacyModal = document.querySelector('.popup-privacy');
@@ -55,16 +55,19 @@ export const modal = () => {
   })
 
 
-  closePriceModalBtn.addEventListener('click', () => {
-    closeModal(priceModal)
-  })
-
   closePrivacyModalBtn.addEventListener('click', () => {
     closeModal(privacyModal)
   })
 
   closeconsultationModalBtn.addEventListener('click', () => {
     closeModal(consultationModal)
+  })
+
+
+  closePriceModalBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeModal(priceModal)
+    })
   })
 
   closeTransparencyModalBtns.forEach(btn => {

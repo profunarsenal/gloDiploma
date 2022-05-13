@@ -3,6 +3,8 @@ import { slider } from "./slider";
 export const sliderMobile = () => {
   const slidesTransparency = document.querySelectorAll('.transparency-item');
   const slidesFormula = document.querySelectorAll('.formula-slider__slide');
+  const priceLinks = document.querySelectorAll('.link-list > a');
+
   let screenWidth = document.documentElement.clientWidth;
 
   const addStyle = (slides) => {
@@ -24,7 +26,17 @@ export const sliderMobile = () => {
 
     slider('.formula-slider__slide',
       '.slider-arrow_left-formula', '.slider-arrow_right-formula', null, null, 'flex');
+
   }
+
+  priceLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (screenWidth < 576) {
+        slider('.popup-repair-types-nav__item',
+          '.nav-arrow-popup-repair_left', '.nav-arrow-popup-repair_right');
+      }
+    })
+  })
 
   window.addEventListener('resize', () => {
     screenWidth = document.documentElement.clientWidth;

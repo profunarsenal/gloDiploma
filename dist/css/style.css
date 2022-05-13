@@ -5217,6 +5217,10 @@ div.wave-block:nth-child(17):after {
     border-radius: 20px !important;
 }
 
+.popup-repair-types-nav__item.active {
+    border: 3px solid #fda900 !important;
+}
+
 @media (max-width: 1024px) {
     .popup-repair-types-nav__item {
         width: 298px;
