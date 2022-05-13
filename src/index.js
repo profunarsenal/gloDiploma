@@ -5,6 +5,7 @@ import { modal } from "./modules/landing/modal"
 import { phoneList } from "./modules/landing/phone-list"
 import { scroll } from "./modules/landing/scroll"
 import { slider } from "./modules/landing/slider"
+import { swiperPortfolio } from "./modules/landing/swiperPortfolio"
 import { tabs } from "./modules/landing/tabs"
 import { transformSlider } from "./modules/landing/transformSlider"
 
@@ -15,6 +16,7 @@ modal()
 accordeon()
 tabs()
 hover()
+swiperPortfolio()
 
 transformSlider('.nav-list-repair', 'nav-arrow-repair-left_base', 'nav-arrow-repair-right_base')
 
