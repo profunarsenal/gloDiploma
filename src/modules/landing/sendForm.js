@@ -100,7 +100,9 @@ export const sendForm = (formId) => {
 
   document.addEventListener('input', (e) => {
     if (e.target === inputPhone) {
-      e.target.value = e.target.value.replace(/\D/, "");
+      e.target.value = e.target.value.replace(/\s+/, "");
+      e.target.value = e.target.value.replace(/[^\+\d]/, "");
+      e.target.value = e.target.value.replace(/\+{2,}/g, '');
     } else if (e.target === inputName) {
       e.target.value = e.target.value.replace(/[^\D]/gi, "");
     }

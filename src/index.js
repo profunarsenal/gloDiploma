@@ -16,7 +16,8 @@ const reviesSlider = new Slider({
   slidesClass: '.reviews-slider__slide',
   btnPrevClass: '.reviews-arrow_left',
   btnNextClass: '.reviews-arrow_right',
-  display: 'flex'
+  display: 'flex',
+  autoPlay: true
 })
 
 const transparencySlider = new Slider({
@@ -32,7 +33,8 @@ const RepairSlider1 = new Slider({
   btnPrevClass: '.types-repair1_left',
   btnNextClass: '.types-repair1_right',
   slideCurrentClass: '.types-repair1_current',
-  slidesTotalClass: '.types-repair1_total'
+  slidesTotalClass: '.types-repair1_total',
+  autoPlay: true
 })
 
 const RepairSlider2 = new Slider({
@@ -40,7 +42,8 @@ const RepairSlider2 = new Slider({
   btnPrevClass: '.types-repair2_left',
   btnNextClass: '.types-repair2_right',
   slideCurrentClass: '.types-repair2_current',
-  slidesTotalClass: '.types-repair2_total'
+  slidesTotalClass: '.types-repair2_total',
+  autoPlay: true
 })
 
 const RepairSlider3 = new Slider({
@@ -48,7 +51,8 @@ const RepairSlider3 = new Slider({
   btnPrevClass: '.types-repair3_left',
   btnNextClass: '.types-repair3_right',
   slideCurrentClass: '.types-repair3_current',
-  slidesTotalClass: '.types-repair3_total'
+  slidesTotalClass: '.types-repair3_total',
+  autoPlay: true
 })
 
 const RepairSlider4 = new Slider({
@@ -56,7 +60,8 @@ const RepairSlider4 = new Slider({
   btnPrevClass: '.types-repair4_left',
   btnNextClass: '.types-repair4_right',
   slideCurrentClass: '.types-repair4_current',
-  slidesTotalClass: '.types-repair4_total'
+  slidesTotalClass: '.types-repair4_total',
+  autoPlay: true
 })
 
 const RepairSlider5 = new Slider({
@@ -64,7 +69,8 @@ const RepairSlider5 = new Slider({
   btnPrevClass: '.types-repair5_left',
   btnNextClass: '.types-repair5_right',
   slideCurrentClass: '.types-repair5_current',
-  slidesTotalClass: '.types-repair5_total'
+  slidesTotalClass: '.types-repair5_total',
+  autoPlay: true
 })
 
 const portfolioSlider = new Slider({
@@ -72,7 +78,8 @@ const portfolioSlider = new Slider({
   btnPrevClass: '.portfolio-arrow-mobile_left',
   btnNextClass: '.portfolio-arrow-mobile_right',
   slideCurrentClass: '.portfolio-current',
-  slidesTotalClass: '.portfolio-total'
+  slidesTotalClass: '.portfolio-total',
+  autoPlay: true
 })
 
 const portfolioModalSlider = new Slider({
@@ -94,7 +101,7 @@ const servisesSlider = new Slider({
   slidesClass: '.services-slide',
   btnPrevClass: '.slider-services-left',
   btnNextClass: '.slider-services-right',
-  display: 'flex'
+  display: 'flex',
 })
 
 
