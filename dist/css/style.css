@@ -1176,9 +1176,12 @@ template,
     font-size: 18px;
 }
 
+.formula-slider-wrap {
+    margin: 0 !important;
+}
+
 @media (max-width: 575px) {
     .formula-slider-wrap {
-        width: 290px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -8193,7 +8196,7 @@ div.wave-block:nth-child(17):after {
 
 
 #formula-arrow_left {
-    left: -17px;
+    left: 5px;
 }
 
 @media (max-width: 864px) {
@@ -8217,7 +8220,7 @@ div.wave-block:nth-child(17):after {
 }
 
 #formula-arrow_right {
-    right: -24px;
+    right: 5px;
 }
 
 @media (max-width: 864px) {
@@ -9032,5 +9035,9 @@ strong {
 }
 
 .slider-dots {
+    display: none;
+}
+
+#formula-arrow_left {
     display: none;
 }

@@ -1,6 +1,9 @@
 export const hover = () => {
   const elements = document.querySelectorAll('.formula-item__icon');
   const popupElements = document.querySelectorAll('.formula-item__icon > .formula-item-popup');
+  const elemInner = document.querySelectorAll('.formula-item__icon > .formula-item__icon-inner');
+
+  let screenWidth = document.documentElement.clientWidth;
 
   const showPopup = (num) => {
     const position = popupElements[num].getBoundingClientRect();
@@ -12,6 +15,7 @@ export const hover = () => {
       opacity: 1;
       padding: 20px 40px 0;
     `;
+      elemInner[num].style.opacity = 1;
     } else {
       popupElements[num].style.cssText += `
       visibility: visible;
@@ -19,6 +23,7 @@ export const hover = () => {
       bottom: -290%;
       padding: 40px 40px 0;
       `;
+      elemInner[num].style.opacity = 1;
     }
 
   }
@@ -31,15 +36,24 @@ export const hover = () => {
     bottom: 90px;
     padding: 20px 40px 0;
   `;
+    elemInner[num].style.opacity = 0;
   }
 
   elements.forEach((elem, index) => {
     elem.addEventListener('mouseover', () => {
-      showPopup(index)
+      if (screenWidth > 1024) {
+        showPopup(index)
+      }
     })
 
     elem.addEventListener('mouseout', () => {
-      hidePopup(index)
+      if (screenWidth > 1024) {
+        hidePopup(index)
+      }
     })
+  })
+
+  window.addEventListener('resize', () => {
+    screenWidth = document.documentElement.clientWidth;
   })
 }
