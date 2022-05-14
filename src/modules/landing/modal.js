@@ -4,6 +4,7 @@ export const modal = () => {
   const transparencyModal = document.querySelector('.popup-transparency');
   const consultationModal = document.querySelector('.popup-consultation');
   const portfolioModal = document.querySelector('.popup-portfolio');
+  const popupForm = document.querySelector('.popup-thank ');
 
   let screenWidth = document.documentElement.clientWidth;
 
@@ -32,6 +33,8 @@ export const modal = () => {
       openModal(consultationModal)
     } else if (e.target.closest('.close-consultation')) {
       closeModal(consultationModal)
+    } else if (e.target.closest('.close-thank')) {
+      closeModal(popupForm)
     }
   })
 

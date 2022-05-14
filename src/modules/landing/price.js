@@ -69,6 +69,7 @@ export const price = () => {
   const getData = () => {
     return fetch('./db/db.json')
       .then(res => res.json())
+      .catch(e => console.log(e))
   }
 
   getData().then(data => renderTypes(data))

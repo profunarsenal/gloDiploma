@@ -5,6 +5,7 @@ import { modal } from "./modules/landing/modal"
 import { phoneList } from "./modules/landing/phone-list"
 import { price } from "./modules/landing/price"
 import { scroll } from "./modules/landing/scroll"
+import { sendForm } from "./modules/landing/sendForm"
 import { Slider } from "./modules/landing/slider"
 import { sliderMobile } from "./modules/landing/sliderMobile"
 import { swiper } from "./modules/landing/swiper"
@@ -107,6 +108,12 @@ hover()
 swiper()
 sliderMobile()
 transformSlider('.nav-list-repair', 'nav-arrow-repair-left_base', 'nav-arrow-repair-right_base')
+sendForm('feedback1')
+sendForm('feedback2')
+sendForm('feedback3')
+sendForm('feedback4')
+sendForm('feedback5')
+sendForm('feedback6')
 
 transparencySlider.init()
 reviesSlider.init()
