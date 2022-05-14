@@ -8,12 +8,8 @@ export const swiper = () => {
   const formulaBtnNext = document.querySelector('#formula-arrow_right');
   const formulaBtnPrev = document.querySelector('#formula-arrow_left');
 
-  const portfolioSLider = document.querySelector('.portfolio-slider');
-  const portfolioSlides = portfolioSLider.querySelectorAll('.swiper-slide')
   const portfolioBtnNext = document.querySelector('#portfolio-arrow_right');
   const portfolioBtnPrev = document.querySelector('#portfolio-arrow_left');
-
-  console.log(portfolioSlides)
 
   let portfolioCounter = 0;
   let formulaCounter = 0;
@@ -61,7 +57,6 @@ export const swiper = () => {
   formulaBtnNext.addEventListener('click', () => {
     formulaCounter++
 
-    console.log(formulaCounter)
     if (formulaCounter > popupsFormula.length - 1) {
       formulaCounter = 0;
     }
@@ -86,7 +81,6 @@ export const swiper = () => {
   addStyleSlides(iconFormula, 'opacity', 0.1, 1);
   addStyleSlides(iconFormula, 'background', 'none', '#FFB015');
   addStyleSlides(iconFormula, 'color', 'innerit', '#FFF');
-
 
   const portfolioSwiper = new Swiper('.portfolio-slider', {
     modules: [Navigation],
