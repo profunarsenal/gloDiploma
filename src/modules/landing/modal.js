@@ -6,8 +6,6 @@ export const modal = () => {
   const portfolioModal = document.querySelector('.popup-portfolio');
   const popupForm = document.querySelector('.popup-thank ');
 
-  let screenWidth = document.documentElement.clientWidth;
-
   const openModal = (modal) => {
     modal.style.visibility = 'visible';
   }
@@ -33,24 +31,13 @@ export const modal = () => {
       openModal(consultationModal)
     } else if (e.target.closest('.close-consultation')) {
       closeModal(consultationModal)
+    } else if (e.target.closest('.portfolio-slider__slide-frame')) {
+      openModal(portfolioModal)
+    } else if (e.target.closest('.close-portfolio')) {
+      closeModal(portfolioModal)
     } else if (e.target.closest('.close-thank')) {
       closeModal(popupForm)
     }
-  })
-
-
-  if (screenWidth > 576) {
-    document.addEventListener('click', (e) => {
-      if (e.target.closest('.portfolio-slider__slide-frame')) {
-        openModal(portfolioModal)
-      } else if (e.target.closest('.close-portfolio')) {
-        closeModal(portfolioModal)
-      }
-    })
-  }
-
-  window.addEventListener('resize', () => {
-    screenWidth = document.documentElement.clientWidth;
   })
 
 }

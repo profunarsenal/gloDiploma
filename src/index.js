@@ -78,7 +78,7 @@ const portfolioSlider = new Slider({
 const portfolioModalSlider = new Slider({
   slidesClass: '.portfolioModal-slide',
   btnPrevClass: '.portfolio-modal-left',
-  btnNextClass: '.portfolio-modal-right'
+  btnNextClass: '.portfolio-modal-right',
 })
 
 const portfolioTextSlider = new Slider({
@@ -86,7 +86,8 @@ const portfolioTextSlider = new Slider({
   btnPrevClass: '.portfolio-modal-left',
   btnNextClass: '.portfolio-modal-right',
   slideCurrentClass: '.modal-current',
-  slidesTotalClass: '.modal-total'
+  slidesTotalClass: '.modal-total',
+  display: 'flex'
 })
 
 const servisesSlider = new Slider({
