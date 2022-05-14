@@ -17,7 +17,7 @@ export const sendForm = (formId) => {
     const statusBlock = document.createElement('div');
     statusBlock.textContent = text;
     statusBlock.style.cssText = `
-      padding-top: 20px;
+      padding-top: 10px;
       color: #000;
     `;
 

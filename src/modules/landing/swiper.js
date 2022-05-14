@@ -8,9 +8,12 @@ export const swiper = () => {
   const formulaBtnNext = document.querySelector('#formula-arrow_right');
   const formulaBtnPrev = document.querySelector('#formula-arrow_left');
 
-  const portfolioSLides = document.querySelectorAll('.portfolio-slider__slide')
+  const portfolioSLider = document.querySelector('.portfolio-slider');
+  const portfolioSlides = portfolioSLider.querySelectorAll('.swiper-slide')
   const portfolioBtnNext = document.querySelector('#portfolio-arrow_right');
   const portfolioBtnPrev = document.querySelector('#portfolio-arrow_left');
+
+  console.log(portfolioSlides)
 
   let portfolioCounter = 0;
   let formulaCounter = 0;
@@ -64,7 +67,7 @@ export const swiper = () => {
     }
 
     showActiveSlide()
-    showButton(formulaCounter, formulaBtnPrev, formulaBtnNext, 5)
+    showButton(formulaCounter, formulaBtnPrev, formulaBtnNext, popupsFormula.length - 1)
   })
 
   formulaBtnPrev.addEventListener('click', () => {
@@ -75,7 +78,7 @@ export const swiper = () => {
     }
 
     showActiveSlide()
-    showButton(formulaCounter, formulaBtnPrev, formulaBtnNext, 5)
+    showButton(formulaCounter, formulaBtnPrev, formulaBtnNext, popupsFormula.length - 1)
   })
 
   addStyleSlides(popupsFormula, 'opacity', 0, 1);
@@ -87,10 +90,21 @@ export const swiper = () => {
 
   const portfolioSwiper = new Swiper('.portfolio-slider', {
     modules: [Navigation],
-    slidesPerView: 3,
+    slidesPerView: 1,
     navigation: {
       nextEl: "#portfolio-arrow_right",
       prevEl: "#portfolio-arrow_left",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
     },
   });
 
