@@ -1367,6 +1367,21 @@ template,
     .formula-item-popup {
         padding-top: 35px;
         top: 155px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 1024px) {
+    .formula-item {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .formula-item {
+        opacity: 1;
     }
 }
 
@@ -1379,6 +1394,10 @@ template,
         font-size: 12px;
         top: 100px;
         line-height: 20px;
+        visibility: visible;
+        z-index: 9999;
+        opacity: 1;
+        margin-top: 20px;
     }
 }
 

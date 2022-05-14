@@ -30,10 +30,12 @@ export const sliderMobile = () => {
     })
   }
 
-  if (screenWidth < 769) {
+  if (screenWidth < 1091) {
     addStyle(slidesTransparency);
     transparencySlider.init();
+  }
 
+  if (screenWidth < 1025) {
     addStyle(slidesFormula);
     formulaSlider.init();
   }
