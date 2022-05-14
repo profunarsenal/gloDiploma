@@ -1,11 +1,24 @@
-import { slider } from "./slider";
+import { Slider } from "./slider";
 
 export const sliderMobile = () => {
   const slidesTransparency = document.querySelectorAll('.transparency-item');
   const slidesFormula = document.querySelectorAll('.formula-slider__slide');
   const priceLinks = document.querySelectorAll('.link-list > a');
-
   let screenWidth = document.documentElement.clientWidth;
+
+  const transparencySlider = new Slider({
+    slidesClass: '.transparency-item',
+    btnPrevClass: '.transparency-item-left',
+    btnNextClass: '.transparency-item-right',
+    display: 'flex'
+  })
+
+  const formulaSlider = new Slider({
+    slidesClass: '.formula-slider__slide',
+    btnPrevClass: '.slider-arrow_left-formula',
+    btnNextClass: '.slider-arrow_right-formula',
+    display: 'flex'
+  })
 
   const addStyle = (slides) => {
     slides.forEach((slide, index) => {
@@ -21,19 +34,20 @@ export const sliderMobile = () => {
     addStyle(slidesTransparency);
     addStyle(slidesFormula);
 
-    slider('.transparency-item',
-      '.transparency-item-left', '.transparency-item-right', null, null, 'flex');
-
-    slider('.formula-slider__slide',
-      '.slider-arrow_left-formula', '.slider-arrow_right-formula', null, null, 'flex');
-
+    transparencySlider.init()
+    formulaSlider.init()
   }
 
   priceLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (screenWidth < 576) {
-        slider('.popup-repair-types-nav__item',
-          '.nav-arrow-popup-repair_left', '.nav-arrow-popup-repair_right');
+        const popupRepairSlider = new Slider({
+          slidesClass: '.popup-repair-types-nav__item',
+          btnPrevClass: '.nav-arrow-popup-repair_left',
+          btnNextClass: '.nav-arrow-popup-repair_right',
+        })
+
+        popupRepairSlider.init()
       }
     })
   })

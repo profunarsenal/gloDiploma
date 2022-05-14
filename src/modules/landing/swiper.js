@@ -1,6 +1,6 @@
 import Swiper, { Navigation } from 'swiper';
 
-export const swiperPortfolio = () => {
+export const swiper = () => {
   const portfolioBtnNext = document.querySelector('#portfolio-arrow_right');
   const portfolioBtnPrev = document.querySelector('#portfolio-arrow_left');
   let portfolioCounter = 0;
@@ -30,7 +30,7 @@ export const swiperPortfolio = () => {
   })
 
 
-  const portfolioSlider = new Swiper('.portfolio-slider', {
+  const portfolioSwiper = new Swiper('.portfolio-slider', {
     modules: [Navigation],
     slidesPerView: 3,
     navigation: {
