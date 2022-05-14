@@ -30,12 +30,12 @@ export const sliderMobile = () => {
     })
   }
 
-  if (screenWidth < 576) {
+  if (screenWidth < 769) {
     addStyle(slidesTransparency);
-    addStyle(slidesFormula);
+    transparencySlider.init();
 
-    transparencySlider.init()
-    formulaSlider.init()
+    addStyle(slidesFormula);
+    formulaSlider.init();
   }
 
   priceLinks.forEach(link => {
