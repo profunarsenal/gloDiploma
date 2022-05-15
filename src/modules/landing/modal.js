@@ -6,12 +6,29 @@ export const modal = () => {
   const portfolioModal = document.querySelector('.popup-portfolio');
   const popupForm = document.querySelector('.popup-thank ');
 
+  const addStyleModals = () => {
+    const modals = [priceModal, priceModal, transparencyModal, consultationModal, portfolioModal, popupForm];
+
+    modals.forEach(modal => {
+      modal.style.cssText += `
+        opacity: 0;
+        transition: 0.5s ease;
+      `;
+    })
+  }
+
   const openModal = (modal) => {
-    modal.style.visibility = 'visible';
+    modal.style.cssText += `
+      visibility: visible;
+      opacity: 1;
+    `;
   }
 
   const closeModal = (modal) => {
-    modal.style.visibility = 'hidden';
+    modal.style.cssText += `
+      visibility: hidden;
+      opacity: 0;
+    `;
   }
 
   document.addEventListener('click', (e) => {
@@ -40,4 +57,5 @@ export const modal = () => {
     }
   })
 
+  addStyleModals();
 }

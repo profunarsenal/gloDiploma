@@ -67,7 +67,7 @@ export const price = () => {
   }
 
   const getData = () => {
-    return fetch('./db/db.json')
+    return fetch('https://api.jsonbin.io/b/627fa5e938be29676104bb4f')
       .then(res => res.json())
       .catch(e => console.log(e))
   }

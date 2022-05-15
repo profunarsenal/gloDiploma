@@ -12,7 +12,7 @@ module.exports = {
   devServer: {
     hot: true,
     static: {
-      directory: './dist/admin',
+      directory: './dist', // /admin
       watch: true
     }
   }
