@@ -9044,3 +9044,9 @@ strong {
 #formula-arrow_left {
     display: none;
 }
+
+@media(max-width: 767.98px) {
+    #popup-portfolio-counter {
+        display: none;
+    }
+}
