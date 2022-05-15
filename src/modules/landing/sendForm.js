@@ -6,10 +6,16 @@ export const sendForm = (formId) => {
   const popupForm = document.querySelector('.popup-thank ');
 
   const popupOpen = () => {
-    popupForm.style.visibility = 'visible';
+    popupForm.style.cssText += `
+      visibility: visible;
+      opacity: 1;
+    `;
 
     setTimeout(() => {
-      popupForm.style.visibility = 'hidden';
+      popupForm.style.cssText += `
+        visibility: hidden;
+        opacity: 0;
+      `;
     }, 3000)
   }
 
