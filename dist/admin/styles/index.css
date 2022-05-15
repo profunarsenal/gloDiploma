@@ -67,6 +67,7 @@ body {
     transition: background-color var(--transition_time);
     margin: 25px auto 10px;
 }
+
 .button-ui_firm:hover {
     background-color: var(--hover_color);
 }
@@ -82,12 +83,14 @@ body {
     height: 80px;
     animation: animate .9s linear infinite;
 }
+
 @keyframes animate {
     0% {
-        transform:rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -257,6 +260,7 @@ body {
     padding: 8px 20px;
     transform: translateX(-50%);
 }
+
 .tooltip:after {
     content: "";
     position: absolute;
@@ -279,11 +283,13 @@ body {
 }
 
 
-.action-remove, .action-change {
+.action-remove,
+.action-change {
     padding: 3px;
     background: transparent;
     border: none;
 }
+
 .action-change:hover {
     color: var(--firm_color);
 }
@@ -369,7 +375,7 @@ body {
     margin-bottom: 10px;
 }
 
-.text-warning{
+.text-warning {
     color: tomato;
 }
 
@@ -424,27 +430,27 @@ body {
     color: var(--firm_color);
 }
 
-.th-id{
+.th-id {
     min-width: 130px;
 }
 
-.th-type{
+.th-type {
     min-width: 260px;
 }
 
-.th-name{
+.th-name {
     min-width: 260px;
 }
 
-.th-units{
+.th-units {
     min-width: 110px;
 }
 
-.th-cost{
+.th-cost {
     min-width: 110px;
 }
 
-.th-handler{
+.th-handler {
     min-width: 130px;
 }
 
@@ -504,11 +510,11 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-    .th-type{
+    .th-type {
         min-width: 230px;
     }
 
-    .th-name{
+    .th-name {
         min-width: 230px;
     }
 
@@ -553,7 +559,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(51,51,51, .6);
+    background-color: rgba(51, 51, 51, .6);
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
 }
 
@@ -578,4 +584,16 @@ body {
     width: 17px;
     height: 17px;
     fill: var(--txt_grey);
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#search {
+    width: 240px;
+    padding: 0 5px;
 }

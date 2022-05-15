@@ -1,7 +1,7 @@
 import { renderList } from "./renderList";
 import { renderTypes } from "./renderTypes";
 
-export const addService = () => {
+export const changeService = () => {
   const modal = document.getElementById('modal');
   const modalHeader = document.querySelector('.modal__header');
   const form = document.getElementById('service');
@@ -10,19 +10,33 @@ export const addService = () => {
   const inputUnits = document.getElementById('units');
   const inputCost = document.getElementById('cost');
 
-  const addNewService = () => {
-    const newService = {
+  const editService = (elem) => {
+    const id = elem.querySelector('.table__id').textContent;
+
+    databaseService.getService(id).then(service => {
+      inputType.value = service.type;
+      inputName.value = service.name;
+      inputUnits.value = service.units;
+      inputCost.value = service.cost;
+
+      form.dataset.service = id;
+    })
+  }
+
+  const sendChangeService = (id) => {
+    const service = {
       type: inputType.value,
       name: inputName.value,
       units: inputUnits.value,
       cost: inputCost.value
     }
 
-    databaseService.sendNewService(newService).then(() => {
+    databaseService.sendChangeService(id, service).then(() => {
       databaseService.getServices().then(services => {
         renderTypes(services)
         renderList(services)
-        form.reset()
+        form.reset();
+        form.removeAttribute('data-service');
         modal.style.display = 'none';
       })
     })
@@ -31,15 +45,17 @@ export const addService = () => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    if (!form.dataset.service) {
-      addNewService();
+    if (form.dataset.service) {
+      const id = form.dataset.service;
+      sendChangeService(id);
     }
   })
 
   document.addEventListener('click', (e) => {
-    if (e.target.closest('.btn-addItem')) {
-      modalHeader.textContent = 'Добавление новой услуги';
+    if (e.target.closest('.action-change')) {
+      modalHeader.textContent = 'Редактировать услугу';
       modal.style.display = 'flex';
+      editService(e.target.closest('.table__row'));
     } else if (e.target.closest('.button__close') || e.target.closest('.cancel-button')) {
       modal.style.display = 'none';
     }

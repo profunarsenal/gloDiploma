@@ -1,21 +1,9 @@
 export const login = () => {
-  const form = document.querySelector('form');
+  const form = document.getElementById('login');
   const inputName = document.getElementById('name');
   const inputPass = document.getElementById('type');
   const messageName = document.querySelector('.text-warning-name');
   const messagePass = document.querySelector('.text-warning-password');
-
-  const checkAuth = () => {
-    if (window.location.pathname === '/index.html') {
-      localStorage.removeItem('auth');
-    }
-
-    if (window.location.pathname === '/table.html') {
-      if (!localStorage.getItem('auth')) {
-        window.location.href = `/index.html`;
-      }
-    }
-  }
 
   const addCookie = () => {
     let date = new Date(2022, 6, 4,);
@@ -56,7 +44,5 @@ export const login = () => {
     e.preventDefault();
     sendRequest().then(users => authorization(users));
   })
-
-  checkAuth();
 
 }

@@ -15,12 +15,18 @@
 	<main class="main">
 		<div id="container" class="container">
 			<h1 class="title-page">Список услуг</h1>
-			<label>
-				<select name="typeItem" id="typeItem">
-					<option value="Все услуги">Все услуги</option>
-				</select>
-				выбрать тип
-			</label>
+			<div class="inputs">
+				<label>
+					<select name="typeItem" id="typeItem">
+						<option value="Все услуги">Все услуги</option>
+					</select>
+					Выбрать тип
+				</label>
+				<label>
+					<span>Поиск</span>
+					<input id="search" type="text">
+				</label>
+			</div>
 			<div class="table__wrapper">
 				<table id="table" class="table">
 					<thead>

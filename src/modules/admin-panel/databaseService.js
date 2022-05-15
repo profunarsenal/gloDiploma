@@ -20,4 +20,28 @@ export class DatabaseService {
   getFilterServices(option, type) {
     return this.getData(`http://localhost:4444/services?${option}=${type}`)
   }
+
+  sendNewService(service) {
+    return this.sendData('http://localhost:4444/services', 'POST', service)
+  }
+
+  getService(id) {
+    return this.getData(`http://localhost:4444/services/${id}`)
+  }
+
+  sendChangeService(id, service) {
+    return this.sendData(`http://localhost:4444/services/${id}`, 'PUT', service)
+  }
+
+  requestRemoveService(id) {
+    return this.sendData(`http://localhost:4444/services/${id}`, 'DELETE')
+  }
+
+  requestSortService(option) {
+    return this.getData(`http://localhost:4444/services?_sort=${option.name}&_order=${option.value}`)
+  }
+
+  requestSearchService(str) {
+    return this.getData(`http://localhost:4444/services?q=${str}`)
+  }
 }

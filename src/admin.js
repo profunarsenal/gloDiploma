@@ -4,16 +4,35 @@ import { login } from "./modules/admin-panel/login"
 import { DatabaseService } from "./modules/admin-panel/databaseService"
 import { filterServices } from "./modules/admin-panel/filterServices";
 import { addService } from "./modules/admin-panel/addService";
+import { checkAuth } from "./modules/admin-panel/checkAuth";
+import { changeService } from "./modules/admin-panel/changeService";
+import { deleteService } from "./modules/admin-panel/deleteService";
+import { sortService } from "./modules/admin-panel/sortService";
+import { searchService } from "./modules/admin-panel/searchService";
 
 window.databaseService = new DatabaseService;
 
-login()
+if (window.location.pathname === '/index.html') {
+  checkAuth()
+  login()
+}
 
-databaseService.getServices()
-  .then(services => {
-    renderTypes(services)
-    renderList(services)
-  })
+if (window.location.pathname === '/table.html') {
+  checkAuth()
 
-filterServices()
-addService()
+  databaseService.getServices()
+    .then(services => {
+      renderTypes(services)
+      renderList(services)
+    })
+
+  filterServices()
+  addService()
+  changeService()
+  deleteService()
+  sortService()
+  searchService()
+}
+
+
+
