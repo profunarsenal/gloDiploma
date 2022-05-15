@@ -2,6 +2,7 @@ export const transformSlider = (sliderClass, btnPrevClass, btnNextClass) => {
   const slider = document.querySelector(sliderClass);
   const btnPrev = document.getElementById(btnPrevClass);
   const btnNext = document.getElementById(btnNextClass);
+
   let position = 0;
 
   const nextSlide = () => {

@@ -7,80 +7,8 @@ export const swiper = () => {
   const iconFormula = formulaSlider.querySelectorAll('.formula-item__icon-inner');
   const formulaBtnNext = document.querySelector('#formula-arrow_right');
   const formulaBtnPrev = document.querySelector('#formula-arrow_left');
-
   const portfolioBtnNext = document.querySelector('#portfolio-arrow_right');
   const portfolioBtnPrev = document.querySelector('#portfolio-arrow_left');
-
-  let portfolioCounter = 0;
-  let formulaCounter = 0;
-
-  const addStyleSlides = (elems, style, hide, show) => {
-    elems.forEach(elem => {
-      elem.style.cssText += `${style}: ${hide}`;
-    })
-
-    elems[formulaCounter].style.cssText += `${style}: ${show}`;
-  }
-
-  const showActiveSlide = () => {
-    addStyleSlides(popupsFormula, 'opacity', 0, 1);
-    addStyleSlides(decrFormula, 'opacity', 0.1, 1);
-    addStyleSlides(iconFormula, 'opacity', 0.1, 1);
-    addStyleSlides(iconFormula, 'background', 'none', '#FFB015');
-    addStyleSlides(iconFormula, 'color', '#000', '#FFF');
-  }
-
-  const showButton = (counter, prev, next, step) => {
-    if (counter > 0) {
-      prev.style.display = 'flex';
-    } else if (counter <= 0) {
-      prev.style.display = 'none';
-    }
-
-    if (counter >= step) {
-      next.style.display = 'none';
-    } else {
-      next.style.display = 'flex';
-    }
-  }
-
-  portfolioBtnNext.addEventListener('click', () => {
-    portfolioCounter++
-    showButton(portfolioCounter, portfolioBtnPrev, portfolioBtnNext, 2)
-  })
-
-  portfolioBtnPrev.addEventListener('click', () => {
-    portfolioCounter--
-    showButton(portfolioCounter, portfolioBtnPrev, portfolioBtnNext, 2)
-  })
-
-  formulaBtnNext.addEventListener('click', () => {
-    formulaCounter++
-
-    if (formulaCounter > popupsFormula.length - 1) {
-      formulaCounter = 0;
-    }
-
-    showActiveSlide()
-    showButton(formulaCounter, formulaBtnPrev, formulaBtnNext, popupsFormula.length - 1)
-  })
-
-  formulaBtnPrev.addEventListener('click', () => {
-    formulaCounter--
-
-    if (formulaCounter < 0) {
-      formulaCounter = popupsFormula.length - 1;
-    }
-
-    showActiveSlide()
-    showButton(formulaCounter, formulaBtnPrev, formulaBtnNext, popupsFormula.length - 1)
-  })
-
-  addStyleSlides(popupsFormula, 'opacity', 0, 1);
-  addStyleSlides(decrFormula, 'opacity', 0.1, 1);
-  addStyleSlides(iconFormula, 'opacity', 0.1, 1);
-  addStyleSlides(iconFormula, 'background', 'none', '#FFB015');
-  addStyleSlides(iconFormula, 'color', 'innerit', '#FFF');
 
   const portfolioSwiper = new Swiper('.portfolio-slider', {
     modules: [Navigation],
@@ -119,5 +47,78 @@ export const swiper = () => {
       },
     },
   });
+
+  let portfolioCounter = 0;
+  let formulaCounter = 0;
+
+  const addStyleSlides = (elems, style, hide, show) => {
+    elems.forEach(elem => {
+      elem.style.cssText += `${style}: ${hide}`;
+    })
+
+    elems[formulaCounter].style.cssText += `${style}: ${show}`;
+  }
+
+  const showActiveSlide = () => {
+    addStyleSlides(popupsFormula, 'opacity', 0, 1);
+    addStyleSlides(decrFormula, 'opacity', 0.1, 1);
+    addStyleSlides(iconFormula, 'opacity', 0.1, 1);
+    addStyleSlides(iconFormula, 'background', 'none', '#FFB015');
+    addStyleSlides(iconFormula, 'color', '#000', '#FFF');
+  }
+
+  const showButton = (counter, prev, next, step) => {
+    if (counter > 0) {
+      prev.style.display = 'flex';
+    } else if (counter <= 0) {
+      prev.style.display = 'none';
+    }
+
+    if (counter >= step) {
+      next.style.display = 'none';
+    } else {
+      next.style.display = 'flex';
+    }
+  }
+
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('#portfolio-arrow_right')) {
+      portfolioCounter++
+      showButton(portfolioCounter, portfolioBtnPrev, portfolioBtnNext, 2)
+    } else
+
+      if (e.target.closest('#portfolio-arrow_left')) {
+        portfolioCounter--
+        showButton(portfolioCounter, portfolioBtnPrev, portfolioBtnNext, 2)
+      }
+
+    if (e.target.closest('#formula-arrow_right')) {
+      formulaCounter++
+
+      if (formulaCounter > popupsFormula.length - 1) {
+        formulaCounter = 0;
+      }
+
+      showActiveSlide()
+      showButton(formulaCounter, formulaBtnPrev, formulaBtnNext, popupsFormula.length - 1)
+    }
+
+    if (e.target.closest('#formula-arrow_left')) {
+      formulaCounter--
+
+      if (formulaCounter < 0) {
+        formulaCounter = popupsFormula.length - 1;
+      }
+
+      showActiveSlide()
+      showButton(formulaCounter, formulaBtnPrev, formulaBtnNext, popupsFormula.length - 1)
+    }
+  })
+
+  addStyleSlides(popupsFormula, 'opacity', 0, 1);
+  addStyleSlides(decrFormula, 'opacity', 0.1, 1);
+  addStyleSlides(iconFormula, 'opacity', 0.1, 1);
+  addStyleSlides(iconFormula, 'background', 'none', '#FFB015');
+  addStyleSlides(iconFormula, 'color', 'innerit', '#FFF');
 
 }
