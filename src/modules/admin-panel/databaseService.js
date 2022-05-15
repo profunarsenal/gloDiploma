@@ -1,6 +1,8 @@
+import { errorRequest } from "./errorRequest"
+
 export class DatabaseService {
   getData(url) {
-    return fetch(url).then(res => res.json())
+    return fetch(url).then(res => res.json()).catch(() => errorRequest())
   }
 
   sendData(url, method, body) {
@@ -11,6 +13,7 @@ export class DatabaseService {
         "Content-Type": "application/json"
       }
     }).then(res => res.json())
+      .catch(() => errorRequest())
   }
 
   getServices() {

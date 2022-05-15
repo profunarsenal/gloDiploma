@@ -12,12 +12,10 @@ import { searchService } from "./modules/admin-panel/searchService";
 
 window.databaseService = new DatabaseService;
 
-if (window.location.pathname === '/index.html') {
+if (window.location.pathname !== '/table.html') {
   checkAuth()
   login()
-}
-
-if (window.location.pathname === '/table.html') {
+} else {
   checkAuth()
 
   databaseService.getServices()

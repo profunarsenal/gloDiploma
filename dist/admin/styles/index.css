@@ -593,7 +593,25 @@ body {
     margin-bottom: 10px;
 }
 
+@media(max-width: 767.98px) {
+    .inputs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .inputs>* {
+        margin-bottom: 10px;
+    }
+}
+
 #search {
     width: 240px;
     padding: 0 5px;
+}
+
+.message {
+    width: 100%;
+    padding-top: 20px;
+    font-size: 22px;
+    text-align: center;
 }

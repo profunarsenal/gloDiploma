@@ -1,9 +1,7 @@
 export const checkAuth = () => {
-  if (window.location.pathname === '/index.html') {
+  if (window.location.pathname !== '/table.html') {
     localStorage.removeItem('auth');
-  }
-
-  if (window.location.pathname === '/table.html') {
+  } else {
     if (!localStorage.getItem('auth')) {
       window.location.href = `/index.html`;
     }
