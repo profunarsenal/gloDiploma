@@ -35,7 +35,9 @@ export const login = () => {
       } else {
         if (inputName.value !== user.login) {
           messageName.style.display = 'block';
-        } else if (inputPass.value !== user.password) {
+        }
+
+        if (inputPass.value !== user.password) {
           messagePass.style.display = 'block';
         }
 
