@@ -1,5 +1,5 @@
 # gloDiploma
-## Дипломная работа с курса GLO-Academy.
+## Дипломная работа с курса GLO-Academy по javascript.
 ### Работа с готовой версткой.
 ### Ветка master для github pages.
 ### Весь javascript код находится в ветке dev.
